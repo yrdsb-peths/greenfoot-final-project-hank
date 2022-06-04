@@ -12,6 +12,11 @@ public class Turtle extends Actor
      * Act - do whatever the Turtle wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    GreenfootImage turtleImage = new GreenfootImage("images/turtle3.png");
+    public Turtle()
+    {
+        setImage(turtleImage);
+    }
     public void act()
     {
         if(Greenfoot.isKeyDown("left"))
