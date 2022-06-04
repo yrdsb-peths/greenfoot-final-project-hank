@@ -1,4 +1,5 @@
 #Greenfoot project file
+class.MyWorld.image=ocean.png
 class.Straw.image=straw.png
 class.Turtle.image=turtle2.png
 dependency1.from=MyWorld
