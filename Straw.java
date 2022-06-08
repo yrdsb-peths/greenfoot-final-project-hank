@@ -29,7 +29,7 @@ public class Straw extends Actor
         {
             
             world.spawnStraw();
-            
+            world.removeObject(this);
         }
     }
 }
