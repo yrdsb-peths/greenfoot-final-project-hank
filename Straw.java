@@ -27,8 +27,7 @@ public class Straw extends Actor
         MyWorld world = (MyWorld) getWorld();
         if(getY()>=world.getHeight()+25)
         {
-            Turtle turtle = new Turtle();
-            setLocation(turtle.getX(),0);
+            
         }
     }
 }
