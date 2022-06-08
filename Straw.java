@@ -25,8 +25,10 @@ public class Straw extends Actor
         int speed = Greenfoot.getRandomNumber(5);
         setLocation(getX(),getY()+speed);
         MyWorld world = (MyWorld) getWorld();
-        if(getY()>=world.getHeight()+25)
+        if(getY()>=world.getHeight())
         {
+            
+            world.spawnStraw();
             
         }
     }
