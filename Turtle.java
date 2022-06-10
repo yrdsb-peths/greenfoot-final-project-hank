@@ -14,6 +14,7 @@ public class Turtle extends Actor
      */
     GreenfootImage[] idle = new GreenfootImage[3];
     SimpleTimer animationTimer = new SimpleTimer();
+    GreenfootSound fail = new GreenfootSound("epicfail.mp3");
     public Turtle()
     {
         for(int i = 0;i < 3;i++)
@@ -48,7 +49,8 @@ public class Turtle extends Actor
         {
             MyWorld world = (MyWorld) getWorld();
             world.gameOver();
-            removeTouching(Straw.class);
+            removeTouching(Straw.class); 
+            fail.play();
         }
         animateTurtle();
     }
