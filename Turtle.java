@@ -36,11 +36,11 @@ public class Turtle extends Actor
     }
     public void act()
     {
-        if(Greenfoot.isKeyDown("left"))
+        if(Greenfoot.isKeyDown("a"))
         {
             move(-1);
         }
-        else if(Greenfoot.isKeyDown("right"))
+        else if(Greenfoot.isKeyDown("d"))
         {
             move(1);
         }
