@@ -28,6 +28,7 @@ public class Straw extends Actor
         if(getY()>=world.getHeight())
         {
             world.spawnStraw();
+            world.increaseScore();
             world.removeObject(this);   
         }
     }

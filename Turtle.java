@@ -12,7 +12,6 @@ public class Turtle extends Actor
      * Act - do whatever the Turtle wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    MyWorld world = (MyWorld) getWorld();
     GreenfootImage[] idle = new GreenfootImage[3];
     SimpleTimer animationTimer = new SimpleTimer();
     public Turtle()
@@ -21,6 +20,9 @@ public class Turtle extends Actor
         {
             idle[i] = new GreenfootImage("images/idle"+i+".png");
         }
+        /*idle[0] = new GreenfootImage("images/idle.png");
+        idle[1] = new GreenfootImage("images/idleOne.png");
+        idle[2] = new GreenfootImage("images/idle.png");*/
         setImage(idle[0]);
     }
     int imageIndex = 0;
@@ -44,8 +46,9 @@ public class Turtle extends Actor
         }
         if(isTouching(Straw.class))
         {
+            MyWorld world = (MyWorld) getWorld();
             world.gameOver();
-            world.removeObject(this);
+            removeTouching(Straw.class);
         }
         animateTurtle();
     }
