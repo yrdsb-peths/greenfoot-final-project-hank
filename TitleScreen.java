@@ -10,8 +10,7 @@ public class TitleScreen extends World
 {
     Label titleLabel = new Label("Dodge the Straws!",60);
     /**
-     * Constructor for objects of class TitleScreen.
-     * 
+     * Constructor for objects of class TitleScreen. 
      */
     public TitleScreen()
     {    
@@ -22,12 +21,16 @@ public class TitleScreen extends World
     }
     public void act()
     {
+        // Start the game if the user presses the space bar
         if(Greenfoot.isKeyDown("space"))
         {
             MyWorld gameWorld = new MyWorld();
             Greenfoot.setWorld(gameWorld);
         }
     }
+    /**
+     * Display instructions on how to play the game
+     */
     private void prepare()
     {
         Turtle turtle = new Turtle();

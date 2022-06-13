@@ -1,13 +1,15 @@
 #BlueJ class context
 comment0.target=MyWorld
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ This\ is\ the\ world\ where\ the\ turtle\ lives\r\n\ \r\n\ @author\ Hank\ Shi\ \r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=MyWorld()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\r\n\ \r\n
 comment2.params=
 comment2.target=void\ spawnStraw()
+comment2.text=\r\n\ Spawn\ straw\ at\ turtle's\ X\ coordinate\r\n
 comment3.params=
 comment3.target=void\ gameOver()
 comment4.params=
 comment4.target=void\ increaseScore()
+comment4.text=\r\n\ Increase\ score\ by\ 1\ when\ the\ turtle\ dodges\ a\ straw\r\n
 numComments=5

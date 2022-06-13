@@ -1,18 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Straw here.
+ * The straw that the turtle is trying to dodge
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Hank Shi
+ * @version June 2022
  */
 public class Straw extends Actor
 {
-    /**
-     * Act - do whatever the Straw wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     GreenfootImage idleStraw = new GreenfootImage("images/straw.png");
+    /**
+     * Constructor for objects of class Straw.
+     * 
+     */
     public Straw()
     {
         idleStraw.scale(25,50);
@@ -20,10 +20,11 @@ public class Straw extends Actor
     }
     public void act()
     {
-        // Add your action code here.
+        //Randomize the speed of the straw
         int speed = Greenfoot.getRandomNumber(7);
         setLocation(getX(),getY()+speed);
         MyWorld world = (MyWorld) getWorld();
+        // Spawn new straw when current straw disappears
         if(getY()>=world.getHeight())
         {
             world.spawnStraw();

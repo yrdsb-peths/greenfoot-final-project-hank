@@ -1,32 +1,32 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Turtle here.
+ * The turtle which is trying to dodge plastic straws
  * 
  * @author Hank 
  * @version June 2022
  */
 public class Turtle extends Actor
 {
-    /**
-     * Act - do whatever the Turtle wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     GreenfootImage[] idle = new GreenfootImage[3];
     SimpleTimer animationTimer = new SimpleTimer();
     GreenfootSound fail = new GreenfootSound("epicfail.mp3");
+    /**
+     * Constructor for objects of class Turtle.
+     * 
+     */
     public Turtle()
     {
         for(int i = 0;i < 3;i++)
         {
             idle[i] = new GreenfootImage("images/idle"+i+".png");
         }
-        //idle[0] = new GreenfootImage("images/idle.png");
-        /*idle[1] = new GreenfootImage("images/idleOne.png");
-        idle[2] = new GreenfootImage("images/idle.png");*/
         setImage(idle[0]);
     }
     int imageIndex = 0;
+    /**
+     * Animate the turtle
+     */
     public void animateTurtle()
     {
         if(animationTimer.millisElapsed()<100)
@@ -37,14 +37,17 @@ public class Turtle extends Actor
     }
     public void act()
     {
-        if(Greenfoot.isKeyDown("a"))
+        // Move left if A key is pressed
+        if(Greenfoot.isKeyDown("A"))
         {
             move(-1);
         }
-        else if(Greenfoot.isKeyDown("d"))
+        // Move right if D key is pressed
+        else if(Greenfoot.isKeyDown("D"))
         {
             move(1);
         }
+        // Game over if straw touches turtle
         if(isTouching(Straw.class))
         {
             MyWorld world = (MyWorld) getWorld();

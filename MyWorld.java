@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * This is the world where the turtle lives
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Hank Shi 
+ * @version June 2022
  */
 public class MyWorld extends World
 {
@@ -21,6 +21,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Display the number of straws the turtle has dodged
         super(600, 400, 1,false); 
         addObject(turtle, 300,300);
         spawnStraw();
@@ -30,6 +31,9 @@ public class MyWorld extends World
         addObject(score,60,25);
         addObject(scoreLabel,120,25);
     }
+    /**
+     * Spawn straw at turtle's X coordinate
+     */
     public void spawnStraw()
     {
         Straw straw = new Straw();
@@ -42,6 +46,9 @@ public class MyWorld extends World
         Label gameOverLabel = new Label("Game Over",100);
         addObject(gameOverLabel,300,200);
     }
+    /**
+     * Increase score by 1 when the turtle dodges a straw
+     */
     public void increaseScore()
     {
         score++;
