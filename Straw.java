@@ -21,8 +21,7 @@ public class Straw extends Actor
     public void act()
     {
         // Add your action code here.
-
-        int speed = Greenfoot.getRandomNumber(5);
+        int speed = Greenfoot.getRandomNumber(7);
         setLocation(getX(),getY()+speed);
         MyWorld world = (MyWorld) getWorld();
         if(getY()>=world.getHeight())

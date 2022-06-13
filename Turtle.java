@@ -21,8 +21,8 @@ public class Turtle extends Actor
         {
             idle[i] = new GreenfootImage("images/idle"+i+".png");
         }
-        /*idle[0] = new GreenfootImage("images/idle.png");
-        idle[1] = new GreenfootImage("images/idleOne.png");
+        //idle[0] = new GreenfootImage("images/idle.png");
+        /*idle[1] = new GreenfootImage("images/idleOne.png");
         idle[2] = new GreenfootImage("images/idle.png");*/
         setImage(idle[0]);
     }
@@ -54,6 +54,7 @@ public class Turtle extends Actor
         }
         animateTurtle();
     }
+    
     
     
 }
