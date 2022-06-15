@@ -35,6 +35,7 @@ public class Turtle extends Actor
         setImage(idle[imageIndex]);
         imageIndex = (imageIndex+1)%idle.length;
     }
+
     public void act()
     {
         // Move left if A key is pressed
@@ -57,7 +58,6 @@ public class Turtle extends Actor
         }
         animateTurtle();
     }
-    
-    
+
     
 }

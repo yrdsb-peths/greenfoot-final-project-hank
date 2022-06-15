@@ -19,6 +19,7 @@ public class TitleScreen extends World
         addObject(titleLabel,getWidth()/2,getHeight()/2);
         prepare();
     }
+
     public void act()
     {
         // Start the game if the user presses the space bar
@@ -28,6 +29,7 @@ public class TitleScreen extends World
             Greenfoot.setWorld(gameWorld);
         }
     }
+
     /**
      * Display instructions on how to play the game
      */

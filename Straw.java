@@ -18,6 +18,7 @@ public class Straw extends Actor
         idleStraw.scale(25,50);
         setImage(idleStraw);
     }
+
     public void act()
     {
         //Randomize the speed of the straw

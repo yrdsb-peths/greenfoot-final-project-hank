@@ -31,6 +31,7 @@ public class MyWorld extends World
         addObject(score,60,25);
         addObject(scoreLabel,120,25);
     }
+
     /**
      * Spawn straw at turtle's X coordinate
      */
@@ -41,11 +42,13 @@ public class MyWorld extends World
         int y = 25;
         addObject(straw,x,y);
     }
+
     public void gameOver()
     {
         Label gameOverLabel = new Label("Game Over",100);
         addObject(gameOverLabel,300,200);
     }
+
     /**
      * Increase score by 1 when the turtle dodges a straw
      */
