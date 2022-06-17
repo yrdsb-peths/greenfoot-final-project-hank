@@ -6,4 +6,6 @@ comment1.target=Straw()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Straw.\r\n\ \r\n
 comment2.params=
 comment2.target=void\ act()
-numComments=3
+comment3.params=spd
+comment3.target=void\ setSpeed(int)
+numComments=4

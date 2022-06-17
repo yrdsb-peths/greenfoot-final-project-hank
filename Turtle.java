@@ -59,5 +59,4 @@ public class Turtle extends Actor
         animateTurtle();
     }
 
-    
 }

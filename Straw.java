@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Straw extends Actor
 {
     GreenfootImage idleStraw = new GreenfootImage("images/straw.png");
+    int speed = 1;
     /**
      * Constructor for objects of class Straw.
      * 
@@ -21,8 +22,6 @@ public class Straw extends Actor
 
     public void act()
     {
-        //Randomize the speed of the straw
-        int speed = Greenfoot.getRandomNumber(7);
         setLocation(getX(),getY()+speed);
         MyWorld world = (MyWorld) getWorld();
         // Spawn new straw when current straw disappears
@@ -32,5 +31,10 @@ public class Straw extends Actor
             world.increaseScore();
             world.removeObject(this);   
         }
+    }
+    
+    public void setSpeed(int spd)
+    {
+        speed = spd;
     }
 }

@@ -13,7 +13,7 @@ public class MyWorld extends World
     Turtle turtle = new Turtle();
     Label scoreLabel;
     Label highScoreLabel;
-    int level = 1;
+    int level = 3;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -34,15 +34,20 @@ public class MyWorld extends World
 
     /**
      * Spawn straw at turtle's X coordinate
+     * Make straw faster as score increases
      */
     public void spawnStraw()
     {
         Straw straw = new Straw();
+        straw.setSpeed(level);
         int x = turtle.getX();
         int y = 25;
         addObject(straw,x,y);
     }
 
+    /**
+     * Display game over when straw hits turtle
+     */
     public void gameOver()
     {
         Label gameOverLabel = new Label("Game Over",100);
@@ -56,5 +61,7 @@ public class MyWorld extends World
     {
         score++;
         scoreLabel.setValue(score);
+        if(score%5==0)
+            level+=2;
     }
 }
